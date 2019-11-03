@@ -14,6 +14,7 @@
   import Topbar from './components/Topvar'
   import Editor from './components/Editor'
   import Preview from './components/Preview'
+  import icons from './assets/sybo.js'
 
   export default {
     data() {
@@ -22,21 +23,21 @@
         previewMode: false,
         resume: {
           profile: {
-            name: '',
-            city: '',
-            birthday: ''
+            name: '工藤新一',
+            city: '东京',
+            birthday: '1996年5月4日'
           },
           workHistory: [
-            {company: '', content: ''}
+            {company: '小学馆', content: '杀人'}
           ],
-          studyHistory: [{school: '', duration: '', degree: ''}],
-          projects: [{name: '', content: ''}],
-          awards: [{name: ""}],
+          studyHistory: [{school: '米花中学', duration: '1996年至今', degree: '高中生'}],
+          projects: [{name: '酒厂', content: '打琴酒'}],
+          awards: [{name: "平成时代的福尔摩斯"}],
           contacts: {
-            qq: '',
-            wechat: '',
-            email: '',
-            phone: ''
+            qq: '911',
+            wechat: '119',
+            email: '400-882-3823',
+            phone: '110'
           }
         }
       }
@@ -122,7 +123,7 @@
 
   .previewMode #preview {
     max-width: 800px;
-    margin: 32px auto;
+    margin: 16px auto;
   }
 
   #exitPreview {

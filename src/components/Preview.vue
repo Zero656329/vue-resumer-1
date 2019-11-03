@@ -7,8 +7,8 @@
       <h2>工作经历</h2>
       <ul>
         <li v-for="work in filter(resume.workHistory)">
-          {{work.company}}
-          {{work.content}}
+         公司： {{work.company}}
+         工作内容： {{work.content}}
         </li>
       </ul>
     </section>
@@ -16,8 +16,9 @@
       <h2>学习经历</h2>
       <ul>
         <li v-for="work in filter(resume.studyHistory)">
-          {{work.company}}
-          {{work.content}}
+         学校： {{work.school}}
+          时间：{{work.duration}}
+         学历：{{work.degree}}
         </li>
       </ul>
     </section>
@@ -25,8 +26,8 @@
     <h2>项目</h2>
     <ul>
       <li v-for="project in filter(resume.projects)">
-        {{project.name}}
-        {{project.content}}
+       项目名称： {{project.name}}
+       项目内容：{{project.content}}
       </li>
     </ul>
   </section>
@@ -34,14 +35,17 @@
       <h2>获奖情况</h2>
       <ul>
         <li v-for="award in filter(resume.awards)">
-          {{award.name}}
-          {{award.content}}
+          获奖名称：{{award.name}}
+
         </li>
       </ul>
     </section>
     <hr>
 
-    <p>{{resume.contacts.qq ||'请填写QQ'}}|{{resume.contacts.wechat  ||'请填写微信'}}|{{resume.contacts.email  ||'请填写电子邮箱'}}{{resume.contacts.phone  ||'请填写手机号码'}}</p>
+    <p>QQ号码：{{resume.contacts.qq ||'请填写QQ'}}
+      微信号码：{{resume.contacts.wechat  ||'请填写微信'}}
+      邮箱：{{resume.contacts.email  ||'请填写电子邮箱'}}
+      手机号码：{{resume.contacts.phone  ||'请填写手机号码'}}</p>
 
 
   </div>

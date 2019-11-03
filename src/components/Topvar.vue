@@ -1,6 +1,6 @@
 <template>
   <div id="topbar">
-    <div class="logo"> VueResumer</div>
+    <div class="logo"> 简易简历</div>
     <div>努力奋斗</div>
     <div class="actions">
       <el-button v-on:click="preview">预览</el-button>
