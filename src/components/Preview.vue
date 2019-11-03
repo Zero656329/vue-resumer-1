@@ -1,14 +1,15 @@
 <template>
   <div id="preview">
-    <h1>{{resume.profile.name || '请填写姓名'}}</h1>
-    <p>{{resume.profile.city ||'请填写城市'}}|{{resume.profile.birthday  ||'请填写出生年月'}}</p>
+    <h1>姓名：{{resume.profile.name || '请填写姓名'}}</h1>
+    <p>城市：{{resume.profile.city ||'请填写城市'}}</p>
+
+     <p>出生年月：{{resume.profile.birthday  ||'请填写出生年月'}}</p>
     <hr>
     <section v-if='filter(resume.workHistory).length>0'>
       <h2>工作经历</h2>
       <ul>
         <li v-for="work in filter(resume.workHistory)">
-         公司： {{work.company}}
-         工作内容： {{work.content}}
+        <div>公司： {{work.company}}    工作内容： {{work.content}}</div>
         </li>
       </ul>
     </section>
@@ -16,9 +17,9 @@
       <h2>学习经历</h2>
       <ul>
         <li v-for="work in filter(resume.studyHistory)">
-         学校： {{work.school}}
-          时间：{{work.duration}}
-         学历：{{work.degree}}
+        <div> 学校： {{work.school}}
+           时间：{{work.duration}}
+           学历：{{work.degree}}</div>
         </li>
       </ul>
     </section>
@@ -26,8 +27,8 @@
     <h2>项目</h2>
     <ul>
       <li v-for="project in filter(resume.projects)">
-       项目名称： {{project.name}}
-       项目内容：{{project.content}}
+        <div> 项目名称： {{project.name}}</div>
+        <div> 项目内容：{{project.content}}</div>
       </li>
     </ul>
   </section>
@@ -42,10 +43,10 @@
     </section>
     <hr>
 
-    <p>QQ号码：{{resume.contacts.qq ||'请填写QQ'}}
-      微信号码：{{resume.contacts.wechat  ||'请填写微信'}}
-      邮箱：{{resume.contacts.email  ||'请填写电子邮箱'}}
-      手机号码：{{resume.contacts.phone  ||'请填写手机号码'}}</p>
+    <div>QQ号码：{{resume.contacts.qq ||'请填写QQ'}}</div>
+    <div> 微信号码：{{resume.contacts.wechat  ||'请填写微信'}}</div>
+    <div>  邮箱：{{resume.contacts.email  ||'请填写电子邮箱'}}</div>
+    <div>手机号码：{{resume.contacts.phone  ||'请填写手机号码'}}</div>
 
 
   </div>

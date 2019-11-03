@@ -87,7 +87,7 @@
     overflow: hidden;
   }
 
-  #app main {
+   main {
 
     display: flex;
     flex: 1;
