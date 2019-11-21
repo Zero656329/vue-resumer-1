@@ -23,16 +23,19 @@
         previewMode: false,
         resume: {
           profile: {
-            name: '工藤新一',
-            city: '东京',
-            birthday: '1996年5月4日'
+            name: '韩文杰',
+            city: '余姚',
+            birthday: '1990年2月10日'
           },
           workHistory: [
-            {company: '小学馆', content: '杀人'}
+            {company: '舜宇智能科技有限公司', content: 'java开发，2016年-2017年，spring+struts+ibatis+freemarker的mes项目代码开发,2018年至今是springboot项目的后端开发。参与项目前期的业务探讨，以及对新技术的应用。',ctime:'2016年9月——2019年4月'},
+            {company: '方太营销有限公司', content: 'java开发，坐席CEM工作台系统的运维和开发',ctime:'2019年5月——至今'}
           ],
-          studyHistory: [{school: '米花中学', duration: '1996年至今', degree: '高中生'}],
-          projects: [{name: '酒厂', content: '打琴酒'}],
-          awards: [{name: "平成时代的福尔摩斯"}],
+          studyHistory: [{school: '温州大学', duration: '2009年9月-2013年6月', degree: '本科',profession:'土木工程'}],
+          projects: [{name: '工位平台的java部分开发', content: 'mes项目的周边技术开发，为了展示现场公司的生产情况，使用springboot+mybatis+mysql开发的工位辅助程序。使用开发工具是IDEA、NAVCAT、postman。工位数据传入到mes系统中，为了实现这个目的，使用消息队列activemq作为中转站,连接工位与mes系统的消息交互，上位机将工位信息转成json发送消息队列，java项目获取这个消息存入数据库，反之亦然。出现异常情况时发送企业微信给负责人，并且用websocket推送到mes系统的展示页面，用于实时展示。'},{
+            name:'番茄闹钟小程序',content:'后端使用springboot+mybatis+fastjson+druid+mysql，后端工具用IDEA,前端用微信原生技术,工具是微信小程序工具。用json进行交互，按照番茄工作法的原理做的。'
+          }],
+          awards: [{name: "无"}],
           contacts: {
             qq: '911',
             wechat: '119',

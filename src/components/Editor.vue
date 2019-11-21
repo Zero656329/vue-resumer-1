@@ -2,7 +2,7 @@
   <div id="editor">
     <nav>
       <ol>
-        <li v-for="i in [0,1,2,3,4,5]" v-bind:class="{active:currentTab===i}" v-on:click="currentTab=i">
+        <li v-for="i in [0,1,2,3,4,5]" v-bind:class="{active:currentTab===i}" v-on:click="currentTab=i" :key="i">
           <svg class="icon" aria-hidden="true">
             <use v-bind:xlink:href="`#icon-${icons[i]}`"></use>
           </svg>
@@ -17,11 +17,11 @@
       </li>
       <li v-bind:class="{active:currentTab===1}">
 
-        <ArrayEditor v-bind:items="resume.workHistory" v-bind:labels="{company:'公司',content:'工作内容'}"
+        <ArrayEditor v-bind:items="resume.workHistory" v-bind:labels="{company:'公司',content:'工作内容',ctime:'工作时间'}"
                      title="工作经历"></ArrayEditor>
       </li>
       <li v-bind:class="{active:currentTab===2}">
-        <ArrayEditor v-bind:items="resume.studyHistory" v-bind:labels="{school:'学校',duration:'时间',degree:'学位'}"
+        <ArrayEditor v-bind:items="resume.studyHistory" v-bind:labels="{school:'学校',duration:'时间',degree:'学位',profession:'专业'}"
                      title="学习经历"></ArrayEditor>
       </li>
       <li v-bind:class="{active:currentTab===3}">

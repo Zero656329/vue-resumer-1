@@ -9,7 +9,7 @@
       <h2>工作经历</h2>
       <ul>
         <li v-for="work in filter(resume.workHistory)">
-        <div>公司： {{work.company}}    工作内容： {{work.content}}</div>
+        <div>公司： {{work.company}}    工作内容： {{work.content}}  工作时间：{{work.ctime}}</div>
         </li>
       </ul>
     </section>
@@ -19,7 +19,9 @@
         <li v-for="work in filter(resume.studyHistory)">
         <div> 学校： {{work.school}}
            时间：{{work.duration}}
-           学历：{{work.degree}}</div>
+           学历：{{work.degree}}
+           专业：{{work.profession}}
+           </div>
         </li>
       </ul>
     </section>
